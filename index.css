@@ -1,7 +1,7 @@
 body {
     font-family: inter, serif;
     margin: 0;
-    background: black;
+    background: #1C1C1C;
     color: white;
 }
 
@@ -10,6 +10,7 @@ body {
     width: 550px;
     height: 285px;
     text-align: center;
+    font-weight: 800;
 }
 
 #title {
@@ -35,7 +36,7 @@ body {
     margin: 0 auto;
     font-size: 58px;
     text-align: center;
-    font-weight: 800;
+    font-weight: inherit;
 }
 
 #convert-btn {
@@ -55,3 +56,23 @@ body {
     width: 550px;
     height: 729px;
 }
+
+.conversion-container {
+    color: white;
+    width: 500px;
+    height: 109px;
+    background: #273549;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.conversion-header {
+    color: #CCC1FF;
+    padding-top: 31px;
+    padding-right: 77px;
+    padding-left: 77px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
