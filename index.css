@@ -5,7 +5,7 @@ body {
     color: white;
 }
 
-#container {
+#hero {
     background: #6943FF;
     width: 550px;
     height: 285px;
@@ -30,7 +30,7 @@ body {
     background: inherit;
     color: white;
     border: #B295FF solid 1px;
-    width: 117px;
+    width: 170px;
     height: 83px;
     margin: 0 auto;
     font-size: 58px;
@@ -48,4 +48,10 @@ body {
     margin-top: 27px;
     font-size: 16px;
     font-weight: 500;
+}
+
+#conversion-section {
+    background: #1F2937;
+    width: 550px;
+    height: 729px;
 }
