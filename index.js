@@ -19,35 +19,38 @@ const LITERS_TO_GALLONS = 0.264172
 const KILOS_TO_POUNDS = 2.20462
 
 const conversion = {
-    "meters": (meters) => {return (meters * METERS_TO_FEET).toFixed(3)},
-    "liters": (liters) => {return (liters * LITERS_TO_GALLONS).toFixed(3)},
-    "kilos": (kilos) => {return (kilos * KILOS_TO_POUNDS).toFixed(3)}
+    "meters": [METERS_TO_FEET, "feet"],
+    "liters": [LITERS_TO_GALLONS, "gallons"],
+    "kilos": [KILOS_TO_POUNDS, "pounds"]
+}
+
+function convert(el, value) {
+    return (value * conversion[el.getAttribute("name")][0]).toFixed(3)
+}
+
+function reverseConvert(el, value) {
+    return (value / conversion[el.getAttribute("name")][0]).toFixed(3)
+}
+
+const metersEl = document.querySelector("#meter")
+const litersEl = document.querySelector("#liter")
+const kilosEl = document.querySelector("#kilo")
+
+function renderHTML(el, inputValue) {
+    const calculation = convert(el, inputValue)
+    const reverseCalculation = reverseConvert(el, inputValue)
+    const convertFrom = el.getAttribute("name")
+    const convertTo = conversion[convertFrom][1]
+
+    el.innerHTML = `${inputValue} ${convertFrom} = ${calculation} ${convertTo} | 
+        ${inputValue} ${conversion[convertFrom][1]} = ${reverseCalculation} ${convertFrom}`
 }
 
 const convertBtn = document.querySelector("#convert-btn")
 const inputTxt = document.querySelector("#input-txt")
 convertBtn.addEventListener("click", () => {
     const value = Number(inputTxt.value)
-
-    // Tested - Button works!
-    // console.log(calcMetersToFeet(value))
-    // console.log(calcLitersToGallons(value))
-    // console.log(calcKilosToPounds(value))
-
+    renderHTML(metersEl, value)
+    renderHTML(litersEl, value)
+    renderHTML(kilosEl, value)
 })
-
-console.log(conversion["meters"](20))
-
-// Let's aim for DRY
-
-// function render(element) {
-//     const meters = document.querySelector("#meters")
-//     const liters = document.querySelector("#liters")
-//     const kilos = document.querySelector("#kilos")
-
-
-// }
-
-function renderHTML(elementId, inputValue, result) {
-    const el = document.querySelector(`#${elementId}`)
-}
