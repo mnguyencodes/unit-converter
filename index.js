@@ -42,7 +42,7 @@ function renderHTML(el, inputValue) {
     const convertFrom = el.getAttribute("name")
     const convertTo = conversion[convertFrom][1]
 
-    el.innerHTML = `${inputValue} ${convertFrom} = ${calculation} ${convertTo} | 
+    el.textContent = `${inputValue} ${convertFrom} = ${calculation} ${convertTo} | 
         ${inputValue} ${conversion[convertFrom][1]} = ${reverseCalculation} ${convertFrom}`
 }
 
