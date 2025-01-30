@@ -11,7 +11,7 @@ h1 {
     font-size: 28px;
 }
 
-header, section{
+header, section, #input-txt{
     text-align: center;
     font-weight: 800;
 }
@@ -34,15 +34,16 @@ section {
 
 #input-txt {
     background: inherit;
-    color: white;
+    color: inherit;
     border: #B295FF solid 1px;
+    font-size: 58px;
     width: 170px;
     height: 83px;
 }
 
 #convert-btn {
     color: #3D3D3D;
-    background: #FFFFFF;
+    background: white;
     border: none;
     border-radius: 5px;
     width: 117px;
@@ -53,6 +54,7 @@ section {
 }
 
 .main {
+    color: white;
     background: #1F2937;
     height: 444px;
     display: flex;
@@ -61,7 +63,6 @@ section {
 }
 
 .conversion-container {
-    color: white;
     width: 500px;
     height: 109px;
     margin: 0 auto;
