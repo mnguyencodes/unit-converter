@@ -3,25 +3,30 @@ body {
     margin: 0;
     background: #1C1C1C;
     color: white;
+    width: 550px;
+    height: 1014px;
 }
 
-#hero {
-    background: #6943FF;
-    width: 550px;
-    height: 285px;
+h1 {
+    font-size: 28px;
+}
+
+header, section{
     text-align: center;
     font-weight: 800;
 }
 
-#title {
-    width: 450px;
-    margin: 0px auto;
-    padding: 32px 51px;
-    font-size: 28px;
-    line-height: 38px;
+header {
+    background: #6943ff;
+    padding-top: 18px;
+    padding-bottom: 36px;
 }
 
-#input-section {
+section {
+    padding: 18px 0;
+}
+
+.input-section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,10 +38,6 @@ body {
     border: #B295FF solid 1px;
     width: 170px;
     height: 83px;
-    margin: 0 auto;
-    font-size: 58px;
-    text-align: center;
-    font-weight: inherit;
 }
 
 #convert-btn {
@@ -51,9 +52,8 @@ body {
     font-weight: 500;
 }
 
-#conversion-section {
+.main {
     background: #1F2937;
-    width: 550px;
     height: 444px;
     display: flex;
     flex-direction: column;
