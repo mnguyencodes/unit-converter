@@ -4,8 +4,9 @@ body {
     background: #1C1C1C;
     color: white;
     width: 550px;
-    height: 1014px;
 }
+
+/* Typography */
 
 h1 {
     font-size: 28px;
@@ -16,8 +17,35 @@ header, section, #input-txt{
     font-weight: 800;
 }
 
-header {
+header, button {
+    color: #3D3D3D;
+    font-size: 16px;
+    font-weight: 500;
+    background: white;
+}
+
+header, 
+#input-txt {
     background: #6943ff;
+    color: inherit;
+}
+
+.main h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #CCC1FF;
+
+}
+
+.main .conversion-container {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Layout */
+
+header {
+    
     padding-top: 18px;
     padding-bottom: 36px;
 }
@@ -27,14 +55,10 @@ section {
 }
 
 .input-section {
-    display: flex;
-    flex-direction: column;
     align-items: center;
 }
 
 #input-txt {
-    background: inherit;
-    color: inherit;
     border: #B295FF solid 1px;
     font-size: 58px;
     width: 170px;
@@ -42,23 +66,23 @@ section {
 }
 
 #convert-btn {
-    color: #3D3D3D;
-    background: white;
     border: none;
     border-radius: 5px;
     width: 117px;
     height: 42px;
     margin-top: 27px;
-    font-size: 16px;
-    font-weight: 500;
+}
+
+.main,
+.conversion-container,
+.input-section {
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
-    color: white;
     background: #1F2937;
     height: 444px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
 }
 
@@ -67,18 +91,9 @@ section {
     height: 109px;
     margin: 0 auto;
     background: #273549;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 400;
 }
 
 .conversion-header {
-    color: #CCC1FF;
-    padding-top: 31px;
-    padding-right: 77px;
-    padding-left: 77px;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 0;
+    margin: 31px 0 0 0;
 }
 
